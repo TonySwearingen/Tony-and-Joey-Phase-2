@@ -2,9 +2,56 @@
   "coins": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "Name": "Bitcoin (BTC)",
+      "Image": "https://tse3.mm.bing.net/th?id=OIP.JBV7VVSxXvoZ97b0-FAMFAHaHX&pid=Api&P=0&w=195&h=194",
+      "Definition": "Q. What is Bitcoin? A. Bitcoin is a peer-to-peer currency. Peer-to-peer means that no central authority issues new money or tracks transactions. These tasks are managed collectively by the network.",
+      "Explorers": "Bitcoinblockexplorers",
+      "Exchanges": "[CEX: Binance, CoinBase, Crypto.com, Kucoin, Gemini, FTX, ], [DEX: Uniswap, Sushiswap, Shibaswap, Pancakeswap, 1inch Exchange]",
+      "Favorited": false,
+      "Year": "Founded: 2009"
+    },
+    {
+      "id": 2,
+      "Name": "Etherum (ETH)",
+      "Image": "https://tse2.mm.bing.net/th?id=OIP.AqiekXm_300FUcSWR14ebwHaE8&pid=Api&P=0&w=263&h=175",
+      "Definition": "Ethereum is a decentralized, open-source blockchain with smart contract functionality. It is the OG L1 Chain for smart contracts.",
+      "Explorers": "Etherscan",
+      "Exchanges": "[CEX: Binance, CoinBase, Crypto.com, Kucoin, Gemini, FTX, ], [DEX: Uniswap, Sushiswap, Shibaswap, Pancakeswap, 1inch Exchange]",
+      "Favorited": false,
+      "Year": "Founded: 2013"
+    },
+    {
+      "id": 3,
+      "Name": "Solana (SOL)",
+      "Image": "https://tse1.mm.bing.net/th?id=OIP.j-unIi8-PvZHDf-trryc0AHaEo&pid=Api&P=0&w=260&h=163",
+      "Definition": "L1 chain aimed at significant throughput and scalability. Works on Proof of History Consensus",
+      "Explorers": "Solscan",
+      "Exchanges": "[CEX: Binance, CoinBase, Crypto.com, Kucoin, Gemini, FTX, ], [DEX: Uniswap, Sushiswap, Shibaswap, Pancakeswap, 1inch Exchange]",
+      "Favorited": false,
+      "Year": "Founded: 2019"
+    },
+    {
+      "id": 4,
+      "Name": "Cardano (ADA)",
+      "Image": "https://tse1.mm.bing.net/th?id=OIP.ls4Z6WMm6BuA19eAfHjbMgHaE8&pid=Api&rs=1&c=1&qlt=95&w=140&h=93",
+      "Definition": "A proof-of-stake blockchain platform: the first to be founded on peer-reviewed research and developed through evidence-based methods.",
+      "Explorers": "Cardanoscan",
+      "Exchanges": "[CEX: Binance, CoinBase, Crypto.com, Kucoin, Gemini, FTX, ], [DEX: Uniswap, Sushiswap, Shibaswap, Pancakeswap, 1inch Exchange]",
+      "Favorited": false,
+      "Year": "Founded: 2015"
+    },
+    {
+      "id": 5,
+      "Name": "Terra (LUNA)",
+      "Image": "https://tse1.mm.bing.net/th?id=OIP.FLTImg2EHB_ITNjL56jbJwHaFE&pid=Api&rs=1&c=1&qlt=95&w=176&h=120",
+      "Definition": "The leading decentralized and open-source public blockchain protocol for algorithmic stablecoins.",
+      "Explorers": "Terra Finder",
+      "Exchanges": "[CEX: Binance, CoinBase, Crypto.com, Kucoin, Gemini, FTX, ], [DEX: Uniswap, Sushiswap, Shibaswap, Pancakeswap, 1inch Exchange]",
+      "Favorited": false,
+      "Year": "Founded: 2018"
     }
+
+
   ],
   "comments": [
     {
