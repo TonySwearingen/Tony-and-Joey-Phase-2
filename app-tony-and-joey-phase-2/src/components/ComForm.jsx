@@ -2,11 +2,6 @@ import React from 'react'
 
 function ComForm({handleSubmit, setCommentInput, commentInput}) {
 
-  
-
-  
-
-
   return (
     <div>
       <form className="commentbar" onSubmit={handleSubmit}>
@@ -23,4 +18,4 @@ function ComForm({handleSubmit, setCommentInput, commentInput}) {
   )
 }
 
-export default ComForm
+export default ComForm;

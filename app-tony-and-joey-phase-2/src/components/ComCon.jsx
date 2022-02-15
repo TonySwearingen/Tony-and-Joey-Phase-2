@@ -1,11 +1,11 @@
 import React from 'react';
 import Comment from './Comment';
 
-function ComCon() {
+function ComCon({commentInput, setCommentInput}) {
+  
   return (
     <div>ComCon
-        <Comment/>
-        <h1>true</h1>
+        <Comment commentInput={commentInput} setCommentInput={setCommentInput} />
     </div>
   )
 }

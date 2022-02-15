@@ -16,14 +16,20 @@ function App() {
     .then(setCryptoArray)
   }, [])
 
+
+  useEffect (() => {
+    fetch ('http://localhost:6001/comments')
+    .then(res=>res.json())
+    .then(setCommentInput)
+  }, [])
+
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("working");
   }
 
   return (
     <div>
-      <ComCon />
+      <ComCon setCommentInput={setCommentInput} commentInput={commentInput} />
       <TokenCon  cryptoArray={cryptoArray} />
       <ComForm handleSubmit={handleSubmit} setcommentInput={setCommentInput} commentInput={commentInput} />
     <h1>HI TONY</h1>

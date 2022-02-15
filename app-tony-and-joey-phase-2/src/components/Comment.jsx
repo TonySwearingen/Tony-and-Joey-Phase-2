@@ -1,6 +1,9 @@
 import React from 'react'
 
-function Comment() {
+function Comment({commentInput, setCommentInput}) {
+  
+
+  console.log("working?");
   return (
     <div>Comment</div>
   )
