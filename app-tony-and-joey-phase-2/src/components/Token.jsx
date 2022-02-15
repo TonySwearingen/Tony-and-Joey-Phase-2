@@ -6,7 +6,8 @@ function Token({Name, Image, Year}) {
     <div>
       This is {Name}
       <p>{Year}</p>
-      <img src={Image} alt={Name} />
+      {/* <button onClick={handlebitcoinBtn} className="BitcoinButton"><img src={Image} alt={Year}/></button> */}
+
       </div>
   )
 }
