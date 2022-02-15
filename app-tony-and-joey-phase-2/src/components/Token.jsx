@@ -1,9 +1,13 @@
 import React from 'react'
 
-function Token({props}) {
-  console.log(props)
+function Token({Name, Image, Year}) {
+ 
   return (
-    <div>T</div>
+    <div>
+      This is {Name}
+      <p>{Year}</p>
+      <img src={Image} alt={Name} />
+      </div>
   )
 }
 
