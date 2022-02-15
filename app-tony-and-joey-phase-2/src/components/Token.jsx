@@ -21,8 +21,9 @@ function handleToggle(){
             <><button onClick={handleToggle} className="tokenInfoActive">Info </button><div> {Definition}</div></>
         ) : (
           <><button onClick={handleToggle} className="tokenInfo">Exchanges</button><div> {Exchanges} </div></>
-
+         
         )}
+         <TokenInfo />
     <img src={Image} alt={Year}/>
     {Year}
     </div>
