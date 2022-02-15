@@ -1,5 +1,5 @@
-import React from 'react'
-import Comment from '../Comment'
+import React from 'react';
+import Comment from './Comment';
 
 function ComCon() {
   return (
@@ -10,4 +10,4 @@ function ComCon() {
   )
 }
 
-export default ComCon
+export default ComCon;

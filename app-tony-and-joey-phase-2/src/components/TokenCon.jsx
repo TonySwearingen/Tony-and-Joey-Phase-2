@@ -1,12 +1,12 @@
-import React from 'react'
-import Token from './Token'
+import React from 'react';
+import Token from './Token';
 
 function TokenCon() {
   return (
     <div>TokenCon
-    <Token/>
+    <Token />
     </div>
   )
 }
 
-export default TokenCon
+export default TokenCon;
