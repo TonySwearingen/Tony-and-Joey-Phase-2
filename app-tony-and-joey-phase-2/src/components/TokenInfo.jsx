@@ -1,8 +1,11 @@
 import React from 'react'
 
-function TokenInfo() {
+function TokenInfo({Definition}) {
+  console.log(Definition)
+
+
   return (
-    <div>tokenInfo</div>
+    <div> </div>
   )
 }
 
