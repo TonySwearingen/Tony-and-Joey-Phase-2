@@ -5,7 +5,7 @@ function TokenInfo({Definition}) {
 
 
   return (
-    <div> </div>
+    <div></div>
   )
 }
 

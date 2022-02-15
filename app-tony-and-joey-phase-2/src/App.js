@@ -17,14 +17,15 @@ function App() {
   }, [])
 
 
-  useEffect (() => {
-    fetch ('http://localhost:6001/comments')
-    .then(res=>res.json())
-    .then(setCommentInput)
-  }, [])
+  // useEffect (() => {
+  //   fetch ('http://localhost:6001/comments')
+  //   .then(res=>res.json())
+  //   .then(setCommentInput)
+  // }, [])
 
   function handleSubmit(e) {
     e.preventDefault();
+    
   }
 
   return (
@@ -33,11 +34,7 @@ function App() {
       <ComCon setCommentInput={setCommentInput} commentInput={commentInput} />
       <TokenCon  cryptoArray={cryptoArray} />
       <ComForm handleSubmit={handleSubmit} setcommentInput={setCommentInput} commentInput={commentInput} />
-    <h1>HI TONY</h1>
-
-
-    
-    
+        
     </div>
   );
 }

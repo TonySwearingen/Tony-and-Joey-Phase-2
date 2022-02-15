@@ -4,8 +4,9 @@ import Comment from './Comment';
 function ComCon({commentInput, setCommentInput}) {
   
   return (
-    <div>ComCon
-        <Comment commentInput={commentInput} setCommentInput={setCommentInput} />
+    <div>
+    {/* <Comment commentInput={commentInput} setCommentInput={setCommentInput} /> */}
+        
     </div>
   )
 }

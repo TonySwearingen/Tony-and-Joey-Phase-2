@@ -8,8 +8,6 @@ import App from './App';
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    
-    <h1>does this work wyh</h1>
   </React.StrictMode>,
   document.getElementById('root')
 );
