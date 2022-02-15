@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Token() {
+function Token({props}) {
+  console.log(props)
   return (
     <div>T</div>
   )
