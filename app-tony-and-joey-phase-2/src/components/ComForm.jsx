@@ -1,6 +1,19 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 function ComForm({handleSubmit, setCommentInput, commentInput}) {
+
+  
+
+  
+  
+
+    
+  
+
+  function handleCommentChange(e) {
+    e.preventDefault();
+    setCommentInput(e.target.value);
+  }
 
   return (
     <div>
@@ -10,7 +23,7 @@ function ComForm({handleSubmit, setCommentInput, commentInput}) {
           id="comment"
           placeholder="Comments"
           value={commentInput}
-          onChange={(e) => setCommentInput(e.target.value)}
+          onChange={handleCommentChange}
         />
       <button type="submit">Submit</button>
     </form>

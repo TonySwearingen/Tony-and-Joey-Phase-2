@@ -7,33 +7,51 @@ import ComForm from './components/ComForm';
 
 function App() {
 
-  const [cryptoArray, setCryptoArray] = useState([])
-  const [commentInput, setCommentInput] = useState("")
+  const [cryptoArray, setCryptoArray] = useState([]);
+  const [commentInput, setCommentInput] = useState("");
+  
 
   useEffect (() => {
     fetch ('http://localhost:6001/coins')
     .then(res=>res.json())
-    .then(setCryptoArray)
+    .then((data) => setCryptoArray(data))
   }, [])
 
-
-  // useEffect (() => {
-  //   fetch ('http://localhost:6001/comments')
-  //   .then(res=>res.json())
-  //   .then(setCommentInput)
-  // }, [])
+  function handleAddComment(newComment) {
+   
+    setCommentInput(newComment)
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    const commentData = {content: commentInput}
+    const newComment = [...commentInput, commentData]
     
+    setCommentInput("")
+    fetch("http://localhost:6001/comments", {
+      method: "POST",
+      headers: {"Content-Type": "application/json",
+      },
+      body: JSON.stringify(commentData),
+    })
+    .then(res => res.json())
+    .then(data => handleAddComment(data))
+
   }
 
+ 
+  
   return (
     <div>
 
-      <ComCon setCommentInput={setCommentInput} commentInput={commentInput} />
+      <ComCon />
       <TokenCon  cryptoArray={cryptoArray} />
-      <ComForm handleSubmit={handleSubmit} setcommentInput={setCommentInput} commentInput={commentInput} />
+      <ComForm 
+      handleSubmit={handleSubmit} 
+      commentInput={commentInput} 
+      setCommentInput={setCommentInput}
+      />
         
     </div>
   );
