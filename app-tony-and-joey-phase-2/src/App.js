@@ -17,10 +17,10 @@ function App() {
     .then((data) => setCryptoArray(data))
   }, [])
 
-  function handleAddComment(newComment) {
+  // function handleAddComment(newComment) {
    
-    setCommentInput(newComment)
-  }
+  //   setCommentInput(newComment)
+  // }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -36,7 +36,7 @@ function App() {
       body: JSON.stringify(commentData),
     })
     .then(res => res.json())
-    .then(data => handleAddComment(data))
+    .then(newComment)
 
   }
 
