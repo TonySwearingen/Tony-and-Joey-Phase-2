@@ -1,19 +1,24 @@
 
 import React, { useState }from 'react'
 
-import TokenInfo from './TokenInfo'
 
 function Token({id, Name, Image, Year}) {
 
+  const [theClick, setTheClick] = useState()
+
+  function handleClick() {
+     setTheClick(!id)
+
+  }
 
   return (
     <div>
       <h2>{Name}</h2>
-      <img src={Image} alt={Year} />
-      <p>{Year}</p>
+      <button onClick={handleClick} className=""> <img src={Image} alt={Year}/> </button>
+      <p>{Year} </p>
     </div>
 
   )
 }
 
-export default Token;
+export default Token;        
