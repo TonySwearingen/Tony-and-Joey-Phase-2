@@ -50,14 +50,15 @@
       "Favorited": false,
       "Year": "Founded: 2018"
     }
-
-
   ],
   "comments": [
     {
       "id": 1,
       "content": "some comment"
+    },
+    {
+      "content": "help2",
+      "id": 2
     }
   ]
- 
 }
