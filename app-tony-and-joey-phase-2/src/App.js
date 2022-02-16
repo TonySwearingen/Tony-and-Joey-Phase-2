@@ -2,13 +2,12 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import ComCon from './components/ComCon';
 import TokenCon from './components/TokenCon';
-import ComForm from './components/ComForm';
+import TokenInfo from './components/TokenInfo'
 
 
 function App() {
-
-  const [cryptoArray, setCryptoArray] = useState([]);
-  const [commentInput, setCommentInput] = useState("");
+ const [cryptoArray, setCryptoArray] = useState([]);
+ const [chosenTokenId, setChosenTokenId] = useState(1);
   
 
   useEffect (() => {
@@ -17,42 +16,15 @@ function App() {
     .then((data) => setCryptoArray(data))
   }, [])
 
-  // function handleAddComment(newComment) {
-   
-  //   setCommentInput(newComment)
-  // }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  const findToken = cryptoArray.find(token => token.id === chosenTokenId)
 
-    const commentData = {content: commentInput}
-    const newComment = [...commentInput, commentData]
-    
-    setCommentInput("")
-    fetch("http://localhost:6001/comments", {
-      method: "POST",
-      headers: {"Content-Type": "application/json",
-      },
-      body: JSON.stringify(commentData),
-    })
-    .then(res => res.json())
-    .then(newComment)
-
-  }
-
- 
   
   return (
-    <div>
-
-      <ComCon />
+    <div className='app-container'>
       <TokenCon  cryptoArray={cryptoArray} />
-      <ComForm 
-      handleSubmit={handleSubmit} 
-      commentInput={commentInput} 
-      setCommentInput={setCommentInput}
-      />
-        
+      <TokenInfo {...findToken}/>
+      <ComCon />
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Comment() {
+function Comment({content}) {
   
-
+  console.log("working?");
  
   return (
     <div>
-
+      {content}
     </div>
   )
 }

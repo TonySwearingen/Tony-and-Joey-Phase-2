@@ -3,29 +3,14 @@ import React, { useState }from 'react'
 
 import TokenInfo from './TokenInfo'
 
-function Token({Name, Image, Year,Definition,Exchanges}) {
-
-
-const [toggleLike, setToggleLike] = useState(true)
-
-function handleToggle(){
-  setToggleLike( Definition => !Definition)
-}
-  
+function Token({id, Name, Image, Year}) {
 
 
   return (
     <div>
-      {Name}
-      {toggleLike ? (
-            <><button onClick={handleToggle} className="tokenInfoActive">Info </button><div> {Definition}</div></>
-        ) : (
-          <><button onClick={handleToggle} className="tokenInfo">Exchanges</button><div> {Exchanges} </div></>
-         
-        )}
-         <TokenInfo />
-    <img src={Image} alt={Year}/>
-    {Year}
+      <h2>{Name}</h2>
+      <img src={Image} alt={Year} />
+      <p>{Year}</p>
     </div>
 
   )

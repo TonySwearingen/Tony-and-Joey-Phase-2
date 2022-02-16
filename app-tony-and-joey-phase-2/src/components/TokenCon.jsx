@@ -8,9 +8,12 @@ function TokenCon({cryptoArray}) {
   const token = cryptoArray.map(tokens => <Token key={tokens.id} {...tokens}/>)
 
   return (
-    <ul className="tokens">
-      {token}
-    </ul>
+    <div className='token-container'>
+      <ul className="tokens">
+        {token}
+      </ul>
+    </div>
+    
   )
 }
 
