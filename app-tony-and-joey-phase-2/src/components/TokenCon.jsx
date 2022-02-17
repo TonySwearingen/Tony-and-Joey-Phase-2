@@ -1,11 +1,11 @@
 import React from 'react';
 import Token from './Token';
 
-function TokenCon({cryptoArray}) {
+function TokenCon({cryptoArray, handleToken}) {
 
   
 
-  const token = cryptoArray.map(tokens => <Token key={tokens.id} {...tokens}/>)
+  const token = cryptoArray.map(tokens => <Token onSelect={handleToken} key={tokens.id} {...tokens}/>)
 
   return (
     <div className='token-container'>

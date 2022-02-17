@@ -1,9 +1,7 @@
-
-import React, { useState }from 'react'
-import TokenInfo from './TokenInfo'
+import React, { useState }from 'react';
 
 
-function Token({id, Name, Image, Year,}) {
+function Token({id, Name, Image, Year, onSelect}) {
 
 
   
@@ -12,18 +10,20 @@ function Token({id, Name, Image, Year,}) {
 
      function handleRead(){
        setToggleRead( toggleform => !toggleform)
+       onSelect(id)
      }
 
-  
+     
 
   return (
     <div>
       <h2>{Name}</h2>
-     <> { toggleform ?(<><button onClick={handleRead}>
-        <img src={Image} alt={Name}></img>
-      </button><>
-        </><TokenInfo /></>
-        ) : ( <button onClick={handleRead}>show less</button>
+     <> { toggleform ?
+         (<>
+         <img src={Image} alt={Name}></img>
+         <button onClick={handleRead}> Show Less</button>
+         </>)
+ : ( <button onClick={handleRead}>Show More</button>
         )}
      </>
   );
@@ -33,6 +33,6 @@ function Token({id, Name, Image, Year,}) {
     </div>
 
   )
-}
+ } 
 
-export default Token;        
+export default Token;
