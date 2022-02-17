@@ -7,7 +7,7 @@ import TokenInfo from './components/TokenInfo'
 
 function App() {
  const [cryptoArray, setCryptoArray] = useState([]);
- const [chosenTokenId, setChosenTokenId] = useState(3);
+ const [chosenTokenId, setChosenTokenId] = useState();
   
 
   useEffect (() => {

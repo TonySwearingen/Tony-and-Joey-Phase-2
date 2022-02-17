@@ -52,21 +52,6 @@
     }
   ],
   "comments": [
-    {
-      "id": 1,
-      "content": "some comment"
-    },
-    {
-      "content": "help2",
-      "id": 2
-    },
-    {
-      "content": "help2",
-      "id": 3
-    },
-    {
-      "content": "hello",
-      "id": 4
-    }
+    
   ]
 }
