@@ -4,10 +4,9 @@ import ComCon from './components/ComCon';
 import TokenCon from './components/TokenCon';
 import TokenInfo from './components/TokenInfo'
 
-
 function App() {
  const [cryptoArray, setCryptoArray] = useState([]);
- const [chosenTokenId, setChosenTokenId] = useState(3);
+ const [chosenTokenId, setChosenTokenId] = useState('');
   
 
   useEffect (() => {
@@ -18,12 +17,12 @@ function App() {
 
 
   const findToken = cryptoArray.find(token => token.id === chosenTokenId)
-console.log (findToken)
+
   
   return (
     <div className='app-container'>
-      <TokenCon  cryptoArray={cryptoArray} />
-      <TokenInfo {...findToken}/>
+      <TokenCon  cryptoArray={cryptoArray} handleToken={setChosenTokenId} />
+      <TokenInfo {...findToken} />
       <ComCon />
     </div>
   );
